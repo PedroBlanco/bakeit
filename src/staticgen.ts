@@ -257,7 +257,7 @@ export class StaticGen {
     pageData.url = this.getPageUrl(sourceFile);
 
     if (includeContent) {
-      pageData.content = marked(pageText.substr(fmEnd + fmLength));
+      pageData.content = marked.parse(pageText.substr(fmEnd + fmLength));
     }
     return pageData;
   }
