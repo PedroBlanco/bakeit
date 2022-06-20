@@ -24,6 +24,9 @@ class StaticGen {
             this.config = config;
             this.sourceRootPath = config.build.sourceDir;
             this.outputRootPath = config.build.outputDir;
+            if (config.build.urlsPrefix !== undefined) {
+                this.urlsPrefix = config.build.urlsPrefix;
+            }
             this.themeRootPath = path.join(this.sourceRootPath, this.themeDir);
             this.allPagesData = new Array();
             this.templateEngine = new template_engine_1.TemplateEngine(config, this.themeRootPath);
@@ -191,7 +194,7 @@ class StaticGen {
         pageData.config = this.config;
         pageData.url = this.getPageUrl(sourceFile);
         if (includeContent) {
-            pageData.content = marked(pageText.substr(fmEnd + fmLength));
+            pageData.content = marked.parse(pageText.substr(fmEnd + fmLength));
         }
         return pageData;
     }

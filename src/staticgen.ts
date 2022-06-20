@@ -41,6 +41,11 @@ export class StaticGen {
       this.config = config;
       this.sourceRootPath = config.build.sourceDir;
       this.outputRootPath = config.build.outputDir;
+
+      if (config.build.urlsPrefix !== undefined) {
+        this.urlsPrefix = config.build.urlsPrefix;
+    }
+
       this.themeRootPath = path.join(this.sourceRootPath, this.themeDir);
 
       this.allPagesData = new Array<PageData>();

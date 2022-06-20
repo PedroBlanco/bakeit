@@ -8,6 +8,7 @@ export class BuildOptions {
   scripts: string[];
   styles: string[];
   copy: {src: string, dst: string}[];
+  urlsPrefix: string;
 }
 
 export class Config {
