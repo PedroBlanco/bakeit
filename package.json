@@ -1,6 +1,6 @@
 {
-  "name": "bakeit",
-  "version": "0.2.6",
+  "name": "@pedroblanco/bakeit",
+  "version": "0.2.7",
   "description": "Static site generator",
   "keywords": [
     "site generator",
@@ -18,11 +18,20 @@
   "scripts": {
     "build": "tsc"
   },
-  "author": "Elya Sikerin",
+  "contributors" : [
+    {
+      "name" : "Elya Sikerin",
+      "url" : "https://github.com/curvednebula"
+    },  
+    {
+      "name" : "Pedro Blanco",
+      "url" : "https://github.com/PedroBlanco"
+    }
+   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lumarama/bakeit"
+    "url": "https://github.com/PedroBlanco/bakeit"
   },
   "bin": {
     "bakeit": "./dist/main.js"
