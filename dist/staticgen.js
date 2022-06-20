@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.StaticGen = void 0;
 const marked = require("marked");
 const fs = require("fs");
 const fse = require("fs-extra");
